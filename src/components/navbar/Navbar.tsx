@@ -11,11 +11,16 @@ interface IProps {
 const Navbar: React.FC<IProps> = ({ idNumber, leftSectionItems, rightSectionItems }) => {
     return (
         <section id="navbar" className="navbar">
-            <div id="navbar-left-section" className="navbar-left-section">
+            <div className="navbar-area-wrapper">
+                <div style={{ width: "4.8rem", height: "4.8rem", background: "red" }}></div>
+                <div style={{ width: "4.8rem", height: "4.8rem", background: "green" }}></div>
+            </div>
+
+            {/* <div id="navbar-left-section" className="navbar-left-section">
                 {leftSectionItems.map(item => {
                     return item.component;
                 })}
-            </div>
+            </div> */}
         </section>
     );
 };

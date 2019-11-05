@@ -8,7 +8,17 @@ import NavTitle from "./components/navTitle/NavTitle";
 const App: React.FC = () => {
     return (
         <div>
-            <Navbar leftSectionItems={leftSectionItems} rightSectionItems={[]} idNumber={1} />
+            <Navbar leftSectionItems={leftSectionItems} rightSectionItems={[]} idNumber={1}>
+                <div>
+                    <cid></cid>
+                    <cid></cid>
+                    <cid></cid>
+                    <cid></cid>
+                    <cid></cid>
+                </div>
+
+                <div></div>
+            </Navbar>
         </div>
     );
 };

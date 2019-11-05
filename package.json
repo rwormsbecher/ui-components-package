@@ -1,7 +1,7 @@
 {
     "name": "one-suite-ui-components-fabric",
-    "version": "0.1.16",
-    "types": "./src/components/index.d.ts",
+    "version": "0.1.17",
+    "types": "./index.d.ts",
     "private": false,
     "dependencies": {
         "@babel/cli": "^7.6.4",
@@ -13,6 +13,7 @@
         "node-sass": "^4.13.0",
         "office-ui-fabric-react": "^7.56.3",
         "react": "^16.11.0",
+        "react-app-polyfill": "^1.0.4",
         "react-dom": "^16.11.0",
         "react-scripts": "3.2.0",
         "typescript": "3.6.4"
@@ -40,13 +41,14 @@
     "browserslist": {
         "production": [
             ">0.2%",
+            "ie > 9",
             "not dead",
             "not op_mini all"
         ],
         "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
+            "ie > 9",
+            "not dead",
+            "not op_mini all"
         ]
     }
 }
