@@ -1,0 +1,11 @@
+.navbar-title {
+    display: inline-flex;
+    height: 4.7rem;
+    line-height: 4.7rem;
+    font-size: 1.6rem;
+    color: white;
+    vertical-align: top;
+    padding: 0 0.8rem 0 1.2rem;
+    letter-spacing: 0.05rem;
+    padding-top: 1px;
+}

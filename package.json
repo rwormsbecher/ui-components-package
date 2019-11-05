@@ -1,36 +1,52 @@
 {
-  "name": "one-suite-ui-components-fabric",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@types/jest": "24.0.21",
-    "@types/node": "12.12.5",
-    "@types/react": "16.9.11",
-    "@types/react-dom": "16.9.3",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0",
-    "typescript": "3.6.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "one-suite-ui-components-fabric",
+    "version": "0.1.16",
+    "types": "./src/components/index.d.ts",
+    "private": false,
+    "dependencies": {
+        "@babel/cli": "^7.6.4",
+        "@babel/preset-react": "^7.6.3",
+        "@types/jest": "24.0.21",
+        "@types/node": "12.12.5",
+        "@types/react": "16.9.11",
+        "@types/react-dom": "16.9.3",
+        "node-sass": "^4.13.0",
+        "office-ui-fabric-react": "^7.56.3",
+        "react": "^16.11.0",
+        "react-dom": "^16.11.0",
+        "react-scripts": "3.2.0",
+        "typescript": "3.6.4"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.6.3",
+        "@types/enzyme": "^3.10.3",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+        "babel-plugin-transform-export-extensions": "^6.22.0",
+        "check-prop-types": "^1.1.2",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!office-ui-fabric-react)/\"",
+        "eject": "react-scripts eject",
+        "publish:npm": "rimraf dist && mkdir dist && babel src/components --out-dir dist --extensions \".ts,.tsx\" --source-maps inline --copy-files",
+        "test:coverage": "set CI=true && react-scripts test --transformIgnorePatterns \"node_modules/(?!office-ui-fabric-react)/\" --coverage"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
