@@ -1,0 +1,33 @@
+.commandbar-wrapper {
+    display: flex;
+    width: 100%;
+    padding-left: 2.4rem;
+    height: 4rem;
+    background: #f4f4f4;
+}
+
+.commandbar-fabric {
+    width: 100%;
+}
+
+.commandbar-fabric .ms-CommandBar {
+    background: #f4f4f4;
+    height: 4rem;
+}
+
+.commandbar-fabric .commandbar-button {
+    background: #f4f4f4;
+    color: #0089be;
+    padding: 0 1rem;
+}
+.commandbar-fabric .commandbar-button:hover {
+    background: #eaeaea;
+    color: #0089be;
+}
+
+.commandbar-fabric i {
+    color: #0089be !important;
+}
+.commandbar-fabric i:hover {
+    color: #0089be !important;
+}
