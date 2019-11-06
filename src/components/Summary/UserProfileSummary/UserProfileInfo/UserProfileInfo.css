@@ -1,0 +1,18 @@
+.userprofile-info {
+    display: flex;
+    margin-left: 1.5rem;
+}
+
+.userprofile-info .summary-item {
+    display: flex;
+    padding: 0;
+    border-left: 0;
+    width: 18rem;
+}
+
+.userprofile-info .summary-item__header {
+    text-align: left;
+}
+.userprofile-info .summary-item__text {
+    text-align: left;
+}

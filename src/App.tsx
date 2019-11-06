@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { Navbar } from "./components/index";
-import { INavbarSectionItem } from "./components/navbar/typings";
-import { ICommandBarItemProps } from "office-ui-fabric-react/lib/CommandBar";
 import { Panel, PanelType } from "office-ui-fabric-react/lib/Panel";
 
-import NavWaffle from "./components/navWaffle/NavWaffle";
-import NavTitle from "./components/navTitle/NavTitle";
+import { CommandBar } from "./components/CommandBar/index";
+import { Summary, SummaryItem } from "./components/Summary/index";
 
-import { CommandBar } from "./components/CommandBar";
-
-const App: React.FC = () => {
+const App = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const commandBarList: ICommandBarItemProps[] = [
+    const commandBarList = [
         {
             key: "openPanel",
             name: "Open panel",
@@ -27,7 +23,7 @@ const App: React.FC = () => {
 
     return (
         <div>
-            <Navbar leftSectionItems={leftSectionItems} rightSectionItems={[]} idNumber={1}>
+            <Navbar leftSectionItems={[]} rightSectionItems={[]} idNumber={1}>
                 <div></div>
             </Navbar>
             <CommandBar items={commandBarList} />
@@ -43,16 +39,19 @@ const App: React.FC = () => {
             >
                 <div>Panel</div>
             </Panel>
+
+            <Summary
+                image={
+                    "https://st2.depositphotos.com/4111759/12123/v/450/depositphotos_121233262-stock-illustration-male-default-placeholder-avatar-profile.jpg"
+                }
+                header="Rick Hellenthal"
+                subtext="Young Professional"
+            >
+                <SummaryItem header="Lid van:" subtext="2 teams" />
+                <SummaryItem header="Andere header:" subtext="Een subtext" />
+            </Summary>
         </div>
     );
 };
 
-export const leftSectionItems: Array<INavbarSectionItem> = [
-    {
-        component: <NavWaffle />
-    },
-    {
-        component: <NavTitle title="One News" />
-    }
-];
 export default App;

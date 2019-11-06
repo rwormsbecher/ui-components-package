@@ -1,0 +1,27 @@
+.summary-item {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+
+    padding: 0 5.5rem;
+    height: 5rem;
+    border-left: 1px solid white;
+}
+
+.summary-item__header {
+    text-align: center;
+    color: #0078d7;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.summary-item__text {
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (min-width: 882px) {
+    .summary-item {
+        display: flex;
+    }
+}

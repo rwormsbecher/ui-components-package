@@ -1,0 +1,10 @@
+.userprofile {
+    display: flex;
+    flex-direction: row;
+}
+
+.userprofile img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
